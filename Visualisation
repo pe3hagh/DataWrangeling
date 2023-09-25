@@ -1,1 +1,14 @@
-Visualisation and Grouping
+# Visualisation and Grouping
+import matplotlib.pyplot as plt
+# This magic command ensures the plots are displayed inline in a Jupyter Notebook
+%matplotlib inline
+# Group the cars by the number of cylinders and count them
+cylinder_counts = df['num-of-cylinders'].value_counts()
+
+# Create a histogram of the cylinder counts
+plt.figure(figsize=(8, 6))
+plt.bar(cylinder_counts.index, cylinder_counts.values)
+plt.xlabel('Number of Cylinders')
+plt.ylabel('Count')
+plt.title('Distribution of Cars by Number of Cylinders')
+plt.show()
