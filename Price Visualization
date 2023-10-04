@@ -1,0 +1,6 @@
+# Example for "price"
+plt.figure(figsize=(8, 6))
+plt.boxplot(df['price'])
+plt.ylabel('Price')
+plt.title('Box Plot of Car Prices')
+plt.show()
